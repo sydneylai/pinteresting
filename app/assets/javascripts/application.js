@@ -16,6 +16,8 @@
 //= require turbolinks
 //= require_tree .
 
+
+//added 10.21.14
      // First we get the element with class .prev, we want to add an event listener
     // to that element so we can perform a function every time teh element is clicked
     document.getElementsByClassName('prev')[0].addEventListener('click', function () {
@@ -29,3 +31,4 @@
       // then we call the function that changes the current image we had previously coded
       changePicture(slide_current);
     });
+//added 10.21.14
