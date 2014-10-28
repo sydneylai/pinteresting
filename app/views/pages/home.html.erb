@@ -1,11 +1,14 @@
 <div class="jumbotron center">
-<h1>Welcome to my app!</h1>
-<p>
-	<%= link_to "Log in", "#",class: "btn btn-default btn-lg" %>
-	<%= link_to "Sign up", "#",class: "btn btn-primary btn-lg" %>
-</p>
+     <h1>Welcome to my app!</h1>
+     <% if user_signed_in? %>
+          # Welcome Sydney!
+     <% else %>
+       <p>
+         <%= link_to "Log in", new_user_session_path, class: "btn btn-default btn-lg" %>
+         <%= link_to "Sign up", new_user_registration_path, class: "btn btn-primary btn-lg" %>
+       </p>
+  <% end %>  
 </div>
-
 
     <!-- Added -->
  <div class="container">
@@ -34,4 +37,6 @@
     </div>
 <!-- added --> 
 
+<div id="response"></div> <!--THUR 10/23/14-->
+<button id="call" class="btn btn-lg btn-info" onclick="ajax()">CALL </button>
 

@@ -32,3 +32,28 @@
       changePicture(slide_current);
     });
 //added 10.21.14
+
+//added 10.23.14
+function ajax() {
+var xmlhttp;
+ 
+xmlhttp = new XMLHttpRequest();
+ 
+xmlhttp.onreadystatechange = function() {
+if (xmlhttp.readyState == 4 ) {
+if(xmlhttp.status == 200){
+document.getElementById("response").innerHTML = xmlhttp.responseText;
+}
+else if(xmlhttp.status == 400) {
+alert('There was an error 400');
+}
+else {
+alert('something else other than 200 was returned');
+}
+}
+}
+ 
+xmlhttp.open("GET", "/pages/ajax", true);
+xmlhttp.send();
+}
+//added 10.23.14
